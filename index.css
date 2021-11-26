@@ -1,0 +1,47 @@
+.card{
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px;
+    padding: 30px;
+    margin: 20px;
+    width: 400px;
+    transition: all 0.5s ease-out;
+
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+.card p {
+    color: black;
+    font-size: 15px;
+}
+
+.card input:focus {
+    background: lightblue;
+}
+
+.image {
+    float: right;
+
+}
+
+button{
+    background-color:lightblue;
+    align-items: center;
+    border-radius: 3px;
+}
+
+body{
+    background-color: aliceblue;
+    border-radius: 3px;
+}
+
+.cover {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
