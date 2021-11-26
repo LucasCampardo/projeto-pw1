@@ -4,46 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <form action="">
-            <p>
-                <label for="name">Nome:</label>
-                <input type="name" id="name" placeholder="Nome"><br>
-    
-                <br><label for="email">Email Institucional:</label>
-                <input type="email" id="email" placeholder="email"><br>
-    
-                <br><label for="etec_city">ETEC:</label>
-                <select name="cidade" id="city">Cidade:
-                    <option value="Mogi Mirim">ETEC Pedro Ferreira Alves - Mogi Mirim</option>
-                    <option value="Mogi Guacu">ETEC Euro Albino de Souza - Mogi Guaçu</option>
-                    <option value="Itapira">ETEC João Maria Stevanatto - Itapira</option>
-                    <option value="Aguai">ETEC Arnaldo Pereira Cheregatti - Aguaí</option>
-                    <option value="Mongagua">ETEC Adolpho Berezin - Mongaguá</option>
-                    <option value="Santos">ETEC Aristóteles Ferreira - Santos</option>
-                    <option value="Valinhos">ETEC Benedito Storani - Valinhos</option>
-                    <option value="Campinas">ETEC Bento Quirino - Campinas</option>
-                    <option value="Sao Paulo 1">ETEC Albert Einstein - Casa Verde/SP</option>
-                </select><br>
-    
-                <br><label for="rm">RM:</label>
-                <input type="number" id="rm" placeholder="RM"><br>
-    
-                <br><label for="password">Senha:</label>
-                <input type="password" id="senha" placeholder="Senha" onkeyup="trigger()">
-                <span class="showButton"></span>
-                <button class="showButton">Mostrar Senha</button>
-    
-                <br><button type="submit"> ENVIAR</button>
-            </p>
 
-    </div>
+        <div class="cover">
+            <form action="">
+                <div class="row">
+                    <div class="card white">
+                        <h1>NSA - ONLINE</h1>
+                        <b><p>Complete seu cadastro!</p></b>
+                        
+                <p>
+                    <b><label for="name">Nome:</label></b>
+                    <input type="name" id="name" placeholder="Insira seu nome" required><br>
+        
+                    <b><br><label for="email">Email Institucional:</label></b>
+                    <input type="email" id="email" placeholder="Insira seu email" required><br>
+        
+                    <b><br><label for="etec_city">ETEC:</label></b>
+                    <select name="cidade" id="city">Cidade:
+                        <option value="Mogi Mirim">ETEC Pedro Ferreira Alves - Mogi Mirim</option>
+                        <option value="Mogi Guacu">ETEC Euro Albino de Souza - Mogi Guaçu</option>
+                        <option value="Itapira">ETEC João Maria Stevanatto - Itapira</option>
+                        <option value="Aguai">ETEC Arnaldo Pereira Cheregatti - Aguaí</option>
+                        <option value="Mongagua">ETEC Adolpho Berezin - Mongaguá</option>
+                        <option value="Santos">ETEC Aristóteles Ferreira - Santos</option>
+                        <option value="Valinhos">ETEC Benedito Storani - Valinhos</option>
+                        <option value="Campinas">ETEC Bento Quirino - Campinas</option>
+                        <option value="Sao Paulo 1">ETEC Albert Einstein - Casa Verde/SP</option>
+                    </select><br>
     
-    </form>
+                     <form method="POST">
+                        <b><br><label for="rm">RM:</label></b>
+                        <input type="number" id="rm" placeholder="Insira seu RM" required><br>
+            
+                        <b><br><label for="password">Senha:</label></b>
+                        <input type="password" id="senha" placeholder="Insira sua senha" required>
+        
+                        <button type="button" onclick="mostrarsenha()">visualizar a senha</button>
+                     </form>
+                    
+                    <script>
+                        function mostrarsenha() {
+                           var tipo = document.getElementById("senha");
+                           if(tipo.type == "password") {
+                               tipo.type = "text";
+                           }else{
+                               tipo.type = "password"
+                        }    
+                        
+                    }
+                    </script>
+                    <b><br><button type="submit"> ENVIAR</button></b>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        </form>
+        </div>
 </body>
 </html>
